@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.lang.NonNull;
 
 import java.util.Date;
 
@@ -14,10 +13,10 @@ import java.util.Date;
 @Setter
 @Getter
 @ToString
-public class Result {
+public class QuizResult {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer resultId;
+    private Integer QuizResultId;
     @ManyToOne
     @JoinColumn(name = "quiz_taker", nullable = false)
     private User quizTaker;
@@ -27,7 +26,15 @@ public class Result {
     private Date date;
     private Integer totalScore;
 
-    public Result(User quizTaker, Quiz quizTaken, Date date, Integer totalScore) {
+    public QuizResult(Integer QuizResultId, User quizTaker, Quiz quizTaken, Date date, Integer totalScore) {
+        this.QuizResultId = QuizResultId;
+        this.quizTaker = quizTaker;
+        this.quizTaken = quizTaken;
+        this.date = date;
+        this.totalScore = totalScore;
+    }
+
+    public QuizResult(User quizTaker, Quiz quizTaken, Date date, Integer totalScore) {
         this.quizTaker = quizTaker;
         this.quizTaken = quizTaken;
         this.date = date;

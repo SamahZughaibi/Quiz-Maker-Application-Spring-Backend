@@ -11,17 +11,19 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-public class Options {
+public class Choice {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer optionId;
-    private String optionText;
+    private Integer choiceId;
+    private String choiceText;
+    private boolean correctAnswer;
     @ManyToOne
     @JoinColumn(name = "forQuestion", nullable = false)
     private Question homeQuestion;
 
-    public Options(String optionText, Question homeQuestion) {
-        this.optionText = optionText;
+    public Choice(String choiceText, boolean correctAnswer, Question homeQuestion) {
+        this.choiceText = choiceText;
+        this.correctAnswer = correctAnswer;
         this.homeQuestion = homeQuestion;
     }
 }
