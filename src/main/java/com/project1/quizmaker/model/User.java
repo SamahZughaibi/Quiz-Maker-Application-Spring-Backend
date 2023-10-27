@@ -6,6 +6,8 @@ import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import lombok.*;
 
+import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 @Entity
@@ -39,4 +41,7 @@ public class User {
     public int hashCode() {
         return Objects.hash(email, fullName);
     }
+//    public void submitQuiz(Quiz quizTaken, Map<Question, Choice> questionAndChosenChoiceMap){
+//        //for the future when there's a button for the user to submit the quiz, and we need to calculate the result
+//    }
 }

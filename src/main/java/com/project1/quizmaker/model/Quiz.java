@@ -20,7 +20,7 @@ public class Quiz {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer quizId;
     private String title;
-//    private List<String> grades; // to be checked later if I wanted to allow the user to customize grades or not
+
     @ManyToOne
     @JoinColumn(name = "owner_id", nullable = false)
     private User owner;
