@@ -8,4 +8,5 @@ public interface IQuizService {
     public void deleteQuiz(Integer quizId);
     public List<Question> getAllQuestionsByQuizId(Integer quizId);
     public void addQuestionToQuiz(Question question);
+    void updateQuizTitle(String title, Integer quizId);
 }

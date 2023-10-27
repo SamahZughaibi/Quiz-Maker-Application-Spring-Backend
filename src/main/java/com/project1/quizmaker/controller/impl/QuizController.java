@@ -1,11 +1,13 @@
 package com.project1.quizmaker.controller.impl;
 
 import com.project1.quizmaker.controller.dto.QuizTitleDTO;
+import com.project1.quizmaker.controller.interfaces.IQuizController;
 import com.project1.quizmaker.model.Question;
 import com.project1.quizmaker.model.Quiz;
 import com.project1.quizmaker.model.User;
 import com.project1.quizmaker.repository.QuizRepository;
 import com.project1.quizmaker.service.impl.QuizService;
+import com.project1.quizmaker.service.interfaces.IQuizService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -14,11 +16,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-public class QuizController {
+public class QuizController implements IQuizController {
     @Autowired
     QuizRepository quizRepository;
     @Autowired
-    QuizService quizService;
+    IQuizService quizService;
 
     //    ------------------------------ GET ----------------------------
     @GetMapping("/quizzes")
