@@ -20,8 +20,6 @@ public class UserController implements IUserController {
     @Autowired
     UserRepository userRepository;
     @Autowired
-    QuizRepository quizRepository;
-    @Autowired
     IUserService userService;
 
 //    ------------------------------ GET ----------------------------
