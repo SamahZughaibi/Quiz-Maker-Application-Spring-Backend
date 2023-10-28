@@ -29,6 +29,15 @@ public class QuizService implements IQuizService {
         Optional<Quiz> quizOptional = quizRepository.findById(question.getHomeQuiz().getQuizId());
         if (quizOptional.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Quiz: " + question.getHomeQuiz().getQuizId() + " not found");
         questionRepository.save(question);
+        // after question is added, recalculate quiz total score based on the points assigned to the question
+        List<Question> quizQuestions = questionRepository.findAllByHomeQuiz(question.getHomeQuiz());
+        int quizScore = 0;
+        for (int i = 0; i < quizQuestions.size(); i++) {
+            quizScore += quizQuestions.get(i).getPointsAssigned();
+        }
+        Quiz quiz = question.getHomeQuiz();
+        quiz.setQuizScore(quizScore);
+        quizRepository.save(quiz);
     }
     public void updateQuizTitle(String title, Integer quizId){
         Optional<Quiz> quizOptional = quizRepository.findById(quizId);
