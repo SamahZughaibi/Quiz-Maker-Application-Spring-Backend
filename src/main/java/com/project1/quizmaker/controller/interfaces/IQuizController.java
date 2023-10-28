@@ -3,8 +3,6 @@ package com.project1.quizmaker.controller.interfaces;
 import com.project1.quizmaker.controller.dto.QuizTitleDTO;
 import com.project1.quizmaker.model.Question;
 import com.project1.quizmaker.model.Quiz;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 

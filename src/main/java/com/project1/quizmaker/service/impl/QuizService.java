@@ -1,6 +1,5 @@
 package com.project1.quizmaker.service.impl;
 
-import com.project1.quizmaker.controller.dto.QuizTitleDTO;
 import com.project1.quizmaker.model.Question;
 import com.project1.quizmaker.model.Quiz;
 import com.project1.quizmaker.repository.QuestionRepository;
@@ -9,8 +8,6 @@ import com.project1.quizmaker.service.interfaces.IQuizService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;

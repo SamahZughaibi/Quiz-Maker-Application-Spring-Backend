@@ -1,6 +1,5 @@
 package com.project1.quizmaker.service.impl;
 
-import com.project1.quizmaker.model.Choice;
 import com.project1.quizmaker.model.Quiz;
 import com.project1.quizmaker.model.QuizResult;
 import com.project1.quizmaker.model.User;
@@ -14,7 +13,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Date;
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -31,7 +29,6 @@ public class QuizResultService implements IQuizResultService {
         if(quizResultOptionalOptional.isEmpty()) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Result: " + resultId + " not found");
         quizResultRepository.deleteById(resultId);
     }
-
     @Override
     public void addResult(QuizResult quizResult) {
         Optional<Quiz> quizOptional = quizRepository.findById(quizResult.getQuizTaken().getQuizId());

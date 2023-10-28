@@ -2,16 +2,11 @@ package com.project1.quizmaker.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.Inheritance;
-import jakarta.persistence.InheritanceType;
 import lombok.*;
 
-import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 
 @Entity
-//@Inheritance(strategy = InheritanceType.JOINED)
 @NoArgsConstructor
 @Setter
 @Getter

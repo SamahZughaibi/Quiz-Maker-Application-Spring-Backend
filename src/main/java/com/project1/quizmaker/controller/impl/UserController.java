@@ -3,16 +3,13 @@ package com.project1.quizmaker.controller.impl;
 import com.project1.quizmaker.controller.dto.UserFullNameDTO;
 import com.project1.quizmaker.controller.interfaces.IUserController;
 import com.project1.quizmaker.model.*;
-import com.project1.quizmaker.repository.QuizRepository;
 import com.project1.quizmaker.repository.UserRepository;
 import com.project1.quizmaker.service.interfaces.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")

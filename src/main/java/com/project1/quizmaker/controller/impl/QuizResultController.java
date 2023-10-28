@@ -1,8 +1,6 @@
 package com.project1.quizmaker.controller.impl;
 
 import com.project1.quizmaker.controller.interfaces.IQuizResultController;
-import com.project1.quizmaker.model.Choice;
-import com.project1.quizmaker.model.Quiz;
 import com.project1.quizmaker.model.QuizResult;
 import com.project1.quizmaker.repository.QuizResultRepository;
 import com.project1.quizmaker.service.interfaces.IQuizResultService;

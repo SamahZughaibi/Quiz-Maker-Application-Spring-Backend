@@ -1,14 +1,10 @@
 package com.project1.quizmaker.model;
 
-import com.project1.quizmaker.repository.QuestionRepository;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.List;
 
 @Entity
 @NoArgsConstructor

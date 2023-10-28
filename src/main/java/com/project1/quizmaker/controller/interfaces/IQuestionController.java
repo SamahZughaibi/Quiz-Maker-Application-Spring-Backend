@@ -1,10 +1,8 @@
 package com.project1.quizmaker.controller.interfaces;
 
 import com.project1.quizmaker.controller.dto.QuestionTextDTO;
-import com.project1.quizmaker.controller.dto.QuizTitleDTO;
 import com.project1.quizmaker.model.Choice;
 import com.project1.quizmaker.model.Question;
-import com.project1.quizmaker.model.Quiz;
 
 import java.util.List;
 
