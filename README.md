@@ -34,7 +34,8 @@ cd your-repo
 - Spring Framework
 - Spring Boot
 - Spring Data JPA
-- Java
+- JUnit
+- MockMVC
 - Lombok Library
 
 ## Controllers and Routes Structure
