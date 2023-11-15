@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import java.util.Date;
 
@@ -19,9 +21,11 @@ public class QuizResult {
     private Integer QuizResultId;
     @ManyToOne
     @JoinColumn(name = "quiz_taker", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private User quizTaker;
     @ManyToOne
     @JoinColumn(name = "quiz_taken", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Quiz quizTaken;
     private Date date;
     private Integer totalScore;

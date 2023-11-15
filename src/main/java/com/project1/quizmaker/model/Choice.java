@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 @Entity
 @NoArgsConstructor
@@ -19,6 +21,7 @@ public class Choice {
     private boolean correctAnswer;
     @ManyToOne
     @JoinColumn(name = "forQuestion", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Question homeQuestion;
 
     public Choice(String choiceText, boolean correctAnswer, Question homeQuestion) {

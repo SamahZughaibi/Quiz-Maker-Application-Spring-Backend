@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 
 @Entity
@@ -21,6 +23,7 @@ public class Question {
 
     @ManyToOne
     @JoinColumn(name = "for_quiz", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Quiz homeQuiz;
 
     public Question(String questionText, Integer pointsAssigned, Quiz homeQuiz) {
