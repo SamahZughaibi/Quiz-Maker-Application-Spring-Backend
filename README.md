@@ -14,13 +14,13 @@ The project is an application backend developed to enable users to create, admin
 
 1. Clone the repository to your local machine:
 ```bash
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/SamahZughaibi/java-project1-github-repo-sda.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd your-repo
+cd java-project1-github-repo-sda
 ```
 3. Install IntelliJ IDE, and open the project directory.
 
