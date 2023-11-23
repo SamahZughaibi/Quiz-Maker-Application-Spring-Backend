@@ -4,6 +4,10 @@
 
 The project is an application backend developed to enable users to create, administer, and participate in quizzes. 
 
+## Frontend
+You can view the frontend repo [here](https://github.com/SamahZughaibi/java-project1-github-repo-sda)
+
+
 ## Class Diagram
 
 ![Class Diagram](QuizMakerClassDiagram.png)
@@ -96,7 +100,6 @@ cd java-project1-github-repo-sda
 
 - User login
 - Verifying if the owner is the user that is making changes to a quiz, question, or choice.
-- Developing frontend
 - Enabling user to customize grades
 - Providing a shareable quiz link.
 
