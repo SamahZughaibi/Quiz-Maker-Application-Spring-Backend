@@ -91,11 +91,6 @@ cd java-project1-github-repo-sda
 | DELETE      | `/api/results/{resultId}`          | Delete a quiz result by its ID.              |
 
 
-## Extra Links
-
-- [Presentation Slides](https://docs.google.com/presentation/d/1stFo-EYJtBmB_UE0bkDOlAQj8Bh0rc7QH58UuyTZwB8/edit?usp=sharing)
-
-
 ## Future Work
 
 - User login
